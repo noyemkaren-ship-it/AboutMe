@@ -1,0 +1,130 @@
+<!-- contacts.html -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Контакты — Карен | Связь</title>
+     <style>
+          :root {
+               --bg: #0a0a0f;
+               --card: #12121a;
+               --gold: #f0c040;
+               --green: #7ee787;
+               --blue: #58a6ff;
+               --border: #1e1e2e;
+               --text: #c9d1d9;
+               --sub: #8b949e;
+               --radius: 20px;
+               --glow: 0 0 40px rgba(240, 192, 64, 0.12);
+          }
+
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body {
+               font-family: 'Segoe UI', system-ui, sans-serif;
+               background: var(--bg);
+               color: var(--text);
+               min-height: 100vh;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               padding: 20px;
+          }
+
+          .container {
+               background: var(--card);
+               border: 1px solid var(--border);
+               border-radius: var(--radius);
+               padding: 45px 35px;
+               max-width: 500px;
+               width: 100%;
+               box-shadow: var(--glow);
+          }
+
+          h1 {
+               color: var(--gold);
+               margin-bottom: 15px;
+          }
+
+          .contact-method {
+               background: var(--bg);
+               border: 1px solid var(--border);
+               padding: 16px 20px;
+               border-radius: 12px;
+               margin-bottom: 12px;
+          }
+
+          .contact-method span {
+               color: var(--sub);
+               display: block;
+               font-size: 0.8em;
+               text-transform: uppercase;
+               letter-spacing: 1px;
+          }
+
+          .contact-method strong {
+               color: var(--text);
+               font-size: 1.1em;
+          }
+
+          .nav {
+               margin-top: 30px;
+               display: flex;
+               flex-wrap: wrap;
+               gap: 10px;
+          }
+
+          .nav a {
+               padding: 10px 18px;
+               border-radius: 8px;
+               text-decoration: none;
+               font-weight: 600;
+               border: 1px solid var(--border);
+               color: var(--text);
+               transition: all 0.25s;
+          }
+
+          .nav a:hover {
+               border-color: var(--gold);
+               color: var(--gold);
+          }
+
+          @media (max-width: 550px) {
+               .container {
+                    padding: 30px 20px;
+               }
+
+               .nav a {
+                    flex: 1 1 100%;
+                    text-align: center;
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <h1>📞 Контакты</h1>
+          <div class="contact-method">
+               <span>Телефон</span>
+               <strong>+7 (906) 012-21-00</strong>
+          </div>
+          <div class="contact-method">
+               <span>GitHub</span>
+               <strong>noyemkaren-ship-it</strong>
+          </div>
+          <div class="nav">
+               <a href="/">Главная</a>
+               <a href="/aboutMe">Обо мне</a>
+               <a href="/projects">Проекты</a>
+          </div>
+     </div>
+</body>
+
+</html>

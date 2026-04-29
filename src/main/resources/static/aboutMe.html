@@ -1,0 +1,207 @@
+<!-- aboutMe.html -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Обо мне — Карен | Java Spring Developer</title>
+     <style>
+          :root {
+               --bg: #0a0a0f;
+               --card: #12121a;
+               --gold: #f0c040;
+               --green: #7ee787;
+               --blue: #58a6ff;
+               --red: #da3633;
+               --border: #1e1e2e;
+               --text: #c9d1d9;
+               --sub: #8b949e;
+               --radius: 20px;
+               --glow: 0 0 40px rgba(240, 192, 64, 0.12);
+          }
+
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body {
+               font-family: 'Segoe UI', system-ui, sans-serif;
+               background: var(--bg);
+               color: var(--text);
+               min-height: 100vh;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               padding: 20px;
+          }
+
+          .container {
+               background: var(--card);
+               border: 1px solid var(--border);
+               border-radius: var(--radius);
+               padding: 45px 35px;
+               max-width: 650px;
+               width: 100%;
+               box-shadow: var(--glow);
+          }
+
+          h1 {
+               color: var(--gold);
+               margin-bottom: 10px;
+               font-size: 2em;
+          }
+
+          .subtitle {
+               color: var(--sub);
+               margin-bottom: 25px;
+               font-size: 0.95em;
+          }
+
+          h2 {
+               color: var(--gold);
+               margin: 25px 0 12px;
+               font-size: 1.2em;
+               border-bottom: 1px solid var(--border);
+               padding-bottom: 6px;
+          }
+
+          p {
+               line-height: 1.7;
+               margin-bottom: 15px;
+               color: var(--sub);
+          }
+
+          .highlight {
+               color: var(--text);
+               font-weight: 500;
+          }
+
+          .badge-row {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 8px;
+               margin: 15px 0;
+          }
+
+          .badge {
+               background: rgba(240, 192, 64, 0.1);
+               color: var(--gold);
+               padding: 6px 14px;
+               border-radius: 20px;
+               font-size: 0.85em;
+               font-weight: 600;
+          }
+
+          .badge-green {
+               background: rgba(126, 231, 135, 0.1);
+               color: var(--green);
+          }
+
+          .badge-blue {
+               background: rgba(88, 166, 255, 0.1);
+               color: var(--blue);
+          }
+
+          .nav {
+               margin-top: 30px;
+               display: flex;
+               flex-wrap: wrap;
+               gap: 10px;
+          }
+
+          .nav a {
+               padding: 10px 18px;
+               border-radius: 8px;
+               text-decoration: none;
+               font-weight: 600;
+               border: 1px solid var(--border);
+               color: var(--text);
+               transition: all 0.25s;
+          }
+
+          .nav a:hover {
+               border-color: var(--gold);
+               color: var(--gold);
+          }
+
+          @media (max-width: 550px) {
+               .container {
+                    padding: 30px 20px;
+               }
+
+               .nav a {
+                    flex: 1 1 100%;
+                    text-align: center;
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <h1>🐅 Карен Давитович</h1>
+          <p class="subtitle">Java Spring Developer • 14 лет • Россия</p>
+
+          <h2>📌 Кто я</h2>
+          <p>Я <span class="highlight">Java-разработчик</span>, который с нуля проектирует и запускает бэкенды.
+               Специализируюсь на <span class="highlight">Spring Boot</span> — от простых REST API до сложной
+               бизнес-логики с куками, токенами, транзакциями и микросервисной архитектурой.</p>
+          <p>Программирую с 12 лет. Начинал с Python, потом освоил Go, а сейчас мой основной стек — <span
+                    class="highlight">Java 21 + Spring Boot 4</span>. За моими плечами — десятки проектов, от
+               Telegram-ботов до полноценной криптобиржи.</p>
+
+          <h2>🛠️ Технический стек</h2>
+          <div class="badge-row">
+               <span class="badge">Java 21</span>
+               <span class="badge">Spring Boot 4</span>
+               <span class="badge-green">Gradle</span>
+               <span class="badge-blue">Maven</span>
+               <span class="badge">REST API</span>
+               <span class="badge-green">JPA / Hibernate</span>
+               <span class="badge-blue">H2 / PostgreSQL</span>
+          </div>
+          <div class="badge-row">
+               <span class="badge">Linux Debian</span>
+               <span class="badge-green">Bash</span>
+               <span class="badge-blue">Docker</span>
+               <span class="badge">Git / GitHub</span>
+               <span class="badge-green">Python (FastAPI)</span>
+               <span class="badge-blue">Go (Gin)</span>
+          </div>
+
+          <h2>🚀 Мои проекты</h2>
+          <p><span class="highlight">🐅 TigerCoin</span> — криптобиржа на Spring Boot. Регистрация, JWT-токены, курс
+               растёт с каждой покупкой, комиссии, транзакции. Развёрнут на удалённом сервере.</p>
+          <p><span class="highlight">🎰 Казино Тигра</span> — онлайн-казино на Go (Gin + GORM). Регистрация, куки,
+               пополнение баланса, ставки, админ-панель.</p>
+          <p><span class="highlight">💬 VK Bot & Telegram Bot</span> — боты на Python (vkbottle, telebot). Обработка
+               команд, клавиатуры, автоответы.</p>
+          <p>Все проекты есть на <a href="https://github.com/noyemkaren-ship-it?tab=repositories" target="_blank"
+                    style="color:var(--blue);">GitHub</a>.</p>
+
+          <h2>🎯 Чем я занимаюсь сейчас</h2>
+          <p>Углубляюсь в <span class="highlight">Spring Security</span> (JWT, OAuth2), изучаю <span
+                    class="highlight">Docker</span> и контейнеризацию, пишу тесты (JUnit, MockMvc). Готовлюсь к первой
+               официальной работе Java-разработчиком.</p>
+
+          <h2>📚 Образование</h2>
+          <p>Самообразование. Книги: «Spring in Action» (Крейг Уоллс), документация Spring, сотни часов практики. Лучший
+               учитель — работающий код на продакшене.</p>
+
+          <h2>💡 Личные качества</h2>
+          <p>Усидчивость, самостоятельность, умение разбираться в сложных темах без ментора. Если я не знаю — я
+               разбираюсь, пока не заработает. Не боюсь ошибок, потому что каждая ошибка — это шаг к работающему коду.
+          </p>
+
+          <div class="nav">
+               <a href="/">Главная</a>
+               <a href="/projects">Проекты</a>
+               <a href="/contacts">Контакты</a>
+          </div>
+     </div>
+</body>
+
+</html>

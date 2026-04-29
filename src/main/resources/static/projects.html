@@ -1,0 +1,171 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Проекты — Карен | GitHub</title>
+     <style>
+          :root {
+               --bg: #0a0a0f;
+               --card: #12121a;
+               --gold: #f0c040;
+               --green: #7ee787;
+               --blue: #58a6ff;
+               --border: #1e1e2e;
+               --text: #c9d1d9;
+               --sub: #8b949e;
+               --radius: 20px;
+               --glow: 0 0 40px rgba(240, 192, 64, 0.12);
+          }
+
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body {
+               font-family: 'Segoe UI', system-ui, sans-serif;
+               background: var(--bg);
+               color: var(--text);
+               min-height: 100vh;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               padding: 20px;
+          }
+
+          .container {
+               background: var(--card);
+               border: 1px solid var(--border);
+               border-radius: var(--radius);
+               padding: 45px 35px;
+               max-width: 600px;
+               width: 100%;
+               box-shadow: var(--glow);
+               text-align: center;
+          }
+
+          h1 {
+               color: var(--gold);
+               margin-bottom: 10px;
+          }
+
+          .subtitle {
+               color: var(--sub);
+               margin-bottom: 30px;
+          }
+
+          .projects {
+               display: flex;
+               flex-direction: column;
+               gap: 12px;
+               text-align: left;
+               margin-bottom: 30px;
+          }
+
+          .project-card {
+               background: var(--bg);
+               border: 1px solid var(--border);
+               padding: 16px 20px;
+               border-radius: 12px;
+               transition: all 0.25s;
+          }
+
+          .project-card:hover {
+               border-color: var(--gold);
+          }
+
+          .project-card h3 {
+               color: var(--blue);
+               margin-bottom: 4px;
+          }
+
+          .project-card p {
+               color: var(--sub);
+               font-size: 0.9em;
+          }
+
+          .btn {
+               display: inline-block;
+               padding: 14px 28px;
+               background: linear-gradient(135deg, var(--gold), #d4a017);
+               color: #0a0a0f;
+               border-radius: 10px;
+               text-decoration: none;
+               font-weight: 700;
+               transition: all 0.25s;
+          }
+
+          .btn:hover {
+               transform: translateY(-2px);
+               box-shadow: 0 12px 30px rgba(240, 192, 64, 0.35);
+          }
+
+          .nav {
+               margin-top: 25px;
+               display: flex;
+               flex-wrap: wrap;
+               gap: 10px;
+               justify-content: center;
+          }
+
+          .nav a {
+               padding: 10px 18px;
+               border-radius: 8px;
+               text-decoration: none;
+               font-weight: 600;
+               border: 1px solid var(--border);
+               color: var(--text);
+               transition: all 0.25s;
+          }
+
+          .nav a:hover {
+               border-color: var(--gold);
+               color: var(--gold);
+          }
+
+          @media (max-width: 550px) {
+               .container {
+                    padding: 30px 20px;
+               }
+
+               .nav a {
+                    flex: 1 1 100%;
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <h1>📂 Мои проекты</h1>
+          <p class="subtitle">Всё, что я создал — от идеи до продакшена</p>
+          <div class="projects">
+               <div class="project-card">
+                    <h3>🐅 TigerCoin</h3>
+                    <p>Криптобиржа на Spring Boot. Регистрация, токены, курс растёт с каждой покупкой. H2, Gradle, REST
+                         API. А вот ссылка на него <a href="http://46.253.132.225:2222/">TigerCoin</a></p>
+               </div>
+               <div class="project-card">
+                    <h3>🎰 Казино Тигра</h3>
+                    <p>Онлайн-казино на Go (Gin + GORM). Регистрация, куки, пополнение, ставки, админ-панель.</p>
+               </div>
+               <div class="project-card">
+                    <h3>💬 VK Bot & Telegram Bot</h3>
+                    <p>Боты на Python (vkbottle, telebot). Обработка команд, клавиатуры, автоответы.</p>
+               </div>
+          </div>
+          <a href="https://github.com/noyemkaren-ship-it?tab=repositories" target="_blank" class="btn">🔗 Открыть
+               GitHub</a>
+          <div class="nav">
+               <a href="/">Главная</a>
+               <a href="/aboutMe">Обо мне</a>
+               <a href="/contacts">Контакты</a>
+          </div>
+     </div>
+</body>
+
+</html>
