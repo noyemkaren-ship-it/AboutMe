@@ -28,7 +28,7 @@
           }
 
           body {
-               font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+               font-family: 'Segoe UI', system-ui, sans-serif;
                background: var(--bg);
                color: var(--text);
                min-height: 100vh;
@@ -73,18 +73,21 @@
           .tagline {
                color: var(--sub);
                font-size: 1em;
-               margin-bottom: 30px;
+               margin-bottom: 25px;
           }
 
           .badge {
                display: inline-block;
-               background: rgba(240, 192, 64, 0.1);
-               color: var(--gold);
                padding: 6px 16px;
                border-radius: 20px;
                font-size: 0.85em;
                font-weight: 600;
                margin: 4px;
+          }
+
+          .badge-gold {
+               background: rgba(240, 192, 64, 0.1);
+               color: var(--gold);
           }
 
           .badge-green {
@@ -97,8 +100,29 @@
                color: var(--blue);
           }
 
+          .section {
+               text-align: left;
+               margin: 25px 0;
+               background: var(--bg);
+               border: 1px solid var(--border);
+               border-radius: 14px;
+               padding: 20px;
+          }
+
+          .section h2 {
+               color: var(--gold);
+               margin-bottom: 10px;
+               font-size: 1.1em;
+          }
+
+          .section p {
+               color: var(--sub);
+               line-height: 1.6;
+               font-size: 0.95em;
+          }
+
           .nav {
-               margin-top: 35px;
+               margin-top: 30px;
           }
 
           .nav a {
@@ -138,16 +162,52 @@
 <body>
      <div class="container">
           <div class="avatar">🐅</div>
-          <h1>Карен</h1>
-          <p class="tagline">Java Spring Developer • 14 лет • Создаю бэкенды</p>
-          <span class="badge">Java 21</span>
-          <span class="badge">Spring Boot 4</span>
-          <span class="badge-green">Gradle</span>
-          <span class="badge-blue">H2 / PostgreSQL</span>
-          <span class="badge">REST API</span>
-          <span class="badge-green">Linux Debian</span>
+          <h1>Карен Давитович</h1>
+          <p class="tagline">Java Spring Developer • 14 лет • Создаю надёжные бэкенды</p>
+
+          <span class="badge badge-gold">Java 21</span>
+          <span class="badge badge-gold">Spring Boot 4</span>
+          <span class="badge badge-green">Gradle</span>
+          <span class="badge badge-blue">H2 / PostgreSQL</span>
+          <span class="badge badge-gold">REST API</span>
+          <span class="badge badge-green">Linux Debian</span>
+          <span class="badge badge-blue">Docker</span>
+          <span class="badge badge-gold">Git / GitHub</span>
+
+          <div class="section">
+               <h2>🚀 Что я делаю</h2>
+               <p>Проектирую и запускаю полноценные бэкенды на Spring Boot — от регистрации и авторизации до сложной
+                    бизнес-логики с транзакциями, куками и токенами. Разворачиваю проекты на удалённых Linux-серверах.
+               </p>
+          </div>
+
+          <div class="section">
+               <h2>💻 Мой стек</h2>
+               <p><strong>Языки:</strong> Java 21, Python, Go, Bash<br>
+                    <strong>Фреймворки:</strong> Spring Boot, FastAPI, Gin<br>
+                    <strong>Базы данных:</strong> H2, PostgreSQL, SQLite<br>
+                    <strong>Инструменты:</strong> Gradle, Maven, Git, Docker, VS Code, IntelliJ IDEA
+               </p>
+          </div>
+
+          <div class="section">
+               <h2>🐅 Мои проекты</h2>
+               <p><strong>TigerCoin</strong> — криптобиржа на Spring Boot. Регистрация, токены, курс растёт с каждой
+                    покупкой.<br>
+                    <strong>Казино Тигра</strong> — онлайн-казино на Go (Gin + GORM).<br>
+                    <strong>VK Bot & Telegram Bot</strong> — боты на Python (vkbottle, telebot).
+               </p>
+          </div>
+
+          <div class="section">
+               <h2>📈 Мой путь</h2>
+               <p>Начал программировать в 10 лет. Прошёл путь от Python и Go до Java и Spring Boot. Самостоятельно
+                    изучил Gradle, JPA, Hibernate, развернул несколько проектов на VPS. Сейчас углубляюсь в Spring
+                    Security и Docker. Ищу первую официальную работу или стажировку.</p>
+          </div>
+
           <div class="nav">
-               <a href="/aboutMe">Обо мне</a>
+               <a href="/about/me">Обо мне</a>
                <a href="/projects">Проекты</a>
                <a href="/contacts">Контакты</a>
           </div>
